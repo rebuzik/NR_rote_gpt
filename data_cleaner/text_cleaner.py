@@ -4,7 +4,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
-nltk.download('stopwords')
+# nltk.download('stopwords')
 
 
 class TextPreprocessor:
@@ -20,11 +20,11 @@ class TextPreprocessor:
         # Токенизация текста
         tokens = word_tokenize(text)
 
-        # Удаление стоп-слов
-        tokens = [word for word in tokens if word not in self.stop_words]
-
-        # Удаление чисел и специальных символов
-        tokens = [word for word in tokens if word.isalpha()]
+        # # Удаление стоп-слов
+        # tokens = [word for word in tokens if word not in self.stop_words]
+        #
+        # # Удаление чисел и специальных символов
+        # tokens = [word for word in tokens if word.isalpha()]
 
         # Лемматизация (приведение слов к их базовой форме)
         lemmatizer = nltk.stem.WordNetLemmatizer()
